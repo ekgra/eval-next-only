@@ -1,7 +1,7 @@
 export default async function List() {
   let interests = [];
   try {
-    const response = await fetch(`/api/interests`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/interests`, {
       cache: "no-store", // Disable caching for SSR
     });
     if (response.ok) {
